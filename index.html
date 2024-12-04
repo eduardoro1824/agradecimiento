@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mensaje de Agradecimiento</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #00ffff, #00b7ff, #000000);
+            background-size: 400% 400%;
+            animation: gradientBG 10s ease infinite;
+            color: #333;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 160vh;
+           
+        }
+
+        @keyframes gradientBG {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        .container {
+            text-align: center;
+            background: rgba(255, 255, 255, 0.9);
+            margin-top: 140%;
+            padding: 10px;
+            border-radius: 5px;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+            width: 100%; /* Aumenta el ancho */
+            max-width:70%; /* Para ajustar el tamaño máximo */
+            height: auto; /* Ajuste automático de la altura */
+            transition: transform 0.3s ease;
+        }
+
+        .container:hover {
+            transform: scale(1.05);
+        }
+
+        .container img {
+            width: 150px;
+            height: 150px;
+            border-radius: 70px;
+            margin-bottom: 20px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+            border: 4px solid #fff;
+        }
+
+        h1 {
+            color: #2c3e50;
+            margin-bottom: 20px;
+            font-size: 1.5rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-weight: 30; /* Hacer el texto más negrita */
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        p {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+            line-height: 1.8;
+            color: #555;
+            font-weight: 600; /* Aumentar la negrita */
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+        }
+
+        button {
+            background: linear-gradient(135deg, #c300ff, #070349);
+            color: white;
+            border: none;
+            padding: 12px 30px;
+            font-size: 1rem;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: background 0.3s, transform 0.2s, box-shadow 0.3s;
+            font-weight: bold;
+            box-shadow: 0 4px 15px rgba(116, 185, 255, 0.5);
+        }
+
+        button:hover {
+            background: linear-gradient(135deg, #0984e3, #040020);
+            transform: scale(1.1);
+            box-shadow: 0 6px 20px rgba(116, 185, 255, 0.8);
+        }
+
+        #mensajeEspecial {
+            margin-top: 20px;
+            display: none;
+            font-size: 1.2rem;
+            color: #16a085;
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .heart {
+            color: #e74c3c;
+            animation: beat 1.5s infinite;
+        }
+
+        @keyframes beat {
+            0%, 100% {
+                transform: scale(0.5);
+            }
+            50% {
+                transform: scale(1.2);
+            }
+        }
+
+        footer {
+            margin-top: 20px;
+            font-size: 0.9rem;
+            color: #000000;
+            font-weight: 500; /* Aumentar la negrita */
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="img/WhatsApp Image 2024-12-04 at 3.43.13 PM.jpeg" alt="Foto de agradecimiento">
+        <h1>¡Gracias desde el corazón! <span class="heart">❤️</span></h1>
+        <p>Querido profesor Alberto Zapien, quiero tomar un momento para expresar mi profunda gratitud por todo lo que me has enseñado. Cada lección, cada palabra y cada consejo han dejado una marca imborrable en mi aprendizaje y en mi vida.</p>
+        <p>Tu paciencia, dedicación y pasión por compartir conocimiento han sido verdaderamente inspiradoras. No solo me has dado herramientas, sino también motivación para seguir creciendo y aprendiendo cada día.</p>
+        <p>Me siento afortunado de haber tenido un mentor tan excepcional, alguien que ha impactado mi vida de formas que no puedo expresar con palabras. Tus enseñanzas van más allá de lo académico y han transformado mi manera de ver el mundo.</p>
+        <button onclick="mostrarMensaje()">Descubre el mensaje especial</button>
+        <p id="mensajeEspecial"></p>
+        <footer>
+            Creado con cariño por Luis Eduardo Rodríguez Rosales para alguien muy especial. 🌟
+        </footer>
+    </div>
+
+    <script>
+        function mostrarMensaje() {
+            const mensaje = document.getElementById('mensajeEspecial');
+            mensaje.style.display = 'block';
+            mensaje.innerHTML = '¡Gracias por ser una fuente de inspiración y por cambiar vidas con tu enseñanza! Nunca olvidaré lo que he aprendido de ti.';
+        }
+
+        // Ejemplo de uso de Map
+        const mapa = new Map();
+        mapa.set('nombre', 'Eduardo');
+        mapa.set('apellido', 'Rodriguez');
+
+        console.log(mapa.get('nombre')); // "Eduardo"
+        console.log(mapa.size); // 2
+        console.log(mapa.has('nombre')); // true
+    </script>
+</body>
+</html>
